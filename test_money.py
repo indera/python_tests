@@ -36,5 +36,11 @@ class TestMoney(unittest.TestCase):
         remainder = money.get_remainder(2)
         self.assertEqual(1, remainder)
 
+    def test_converter(self):
+        """ will the currency exchange work"""
+        money = Money(10)
+        conversion = money.converter()
+        self.assertEqual(6.50, conversion) 
+
 if __name__ == '__main__':
     unittest.main()

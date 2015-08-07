@@ -23,6 +23,9 @@ class Money(object):
     def get_remainder(self, amt):
         return self._amount % amt
 
+    def converter(self):
+        gbpconversionrate = .65
+        return self._amount * gbpconversionrate
 
 
 
