@@ -30,5 +30,11 @@ class TestMoney(unittest.TestCase):
         money.divide(2)
         self.assertEqual(2, money.get_amount())
 
+    def test_remainder(self):
+        """ Verify that we can divide and get remainder"""
+        money = Money(3)
+        remainder = money.get_remainder(2)
+        self.assertEqual(1, remainder)
+
 if __name__ == '__main__':
     unittest.main()
