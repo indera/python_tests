@@ -23,7 +23,7 @@ class TestMoney(unittest.TestCase):
     def test_atloiaco_mulitply(self):
         money = Money(2)
         money.multiply(2)
-        self.assertEqual(1,1)
+        self.assertEqual(money.get_amount(), 4)
 
     	
 if __name__ == '__main__':
