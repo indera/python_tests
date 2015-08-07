@@ -32,16 +32,14 @@ class TestMoney(unittest.TestCase):
     # Division
     def test_divide(self):
         money = Money(64)
-        money.divide(8)
 
-        self.assertEqual(8, money.get_amount())
+        self.assertEqual(8, money.divide(8))
 
     # Division with remainder
     def test_divide_with_remainder(self):
         money = Money(100)
-        money.divide(8)
 
-        self.assertEqual(12, money.get_amount())
+        self.assertEqual(12, money.divide(8))
         self.assertEqual(4, money.get_remainder())
 
 if __name__ == '__main__':

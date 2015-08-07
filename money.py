@@ -29,6 +29,7 @@ class Money(object):
     def divide(self, amt):
 
         whole, decimals = divmod(self._amount, amt)
-
-        self._amount = whole
         self._remainder = decimals
+
+        return whole
+
