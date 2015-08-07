@@ -47,7 +47,7 @@ class TestMoney(unittest.TestCase):
         money = Money(2)
         money.converter(.91)
         self.assertEqual(1.82, money.get_converter())
-        
+        print 'You have ', money.get_converter(), ' Euros to spend.'
 
 
 
