@@ -41,4 +41,3 @@ class Money(object):
 
         self._converted_amount = self._amount * conversion_amount
 
-        
