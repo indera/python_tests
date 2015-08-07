@@ -13,3 +13,12 @@ class Money(object):
 
     def add(self, amt):
         self._amount = self._amount + amt
+
+    def multiply(self, amt):
+        count = 0
+        answer = 0
+        while count < amt:
+            answer += self._amount
+            count = count +1
+
+        self._amount = answer
