@@ -17,5 +17,9 @@ class Money(object):
     def divide(self, factor):
         self._amount = self._amount / factor
 
+    def convert(self, currency):
+        converted = self._amount * (self.rates[currency]/self.rates[self.currency])
+        return(converted)
+
     def get_amount(self):
         return self._amount

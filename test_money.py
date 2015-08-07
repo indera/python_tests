@@ -34,6 +34,26 @@ class TestMoney(unittest.TestCase):
         money.divide(5)
         self.assertEqual(money.get_amount(),5)
 
+    def test_convert(self):
+        """
+        Verify that the method convert_currency in the money class produces the correct results
+        """
+        # Arrange for test
+        rates = {
+            "USD": 1.00,
+            "EUR": 2.00,
+            "GBP": 1.50
+        }
+        money = Money(30)
+        money.currency = "USD"
+        money.rates = rates
+
+        # Act (run test)
+        euros = money.convert("EUR")
+
+        # Assert values
+        self.assertAlmostEqual(euros, 60, places=2)
+
 
 if __name__ == '__main__':
     unittest.main()
