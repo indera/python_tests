@@ -24,5 +24,11 @@ class TestMoney(unittest.TestCase):
         money.multiply(3)
         self.assertEqual(6, money.get_amount())
 
+    def test_divide(self):
+        """ Verify that we can multiple a number to the class amount"""
+        money = Money(4)
+        money.divide(2)
+        self.assertEqual(2, money.get_amount())
+
 if __name__ == '__main__':
     unittest.main()
