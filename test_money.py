@@ -39,7 +39,7 @@ class TestMoney(unittest.TestCase):
         money = Money(100)
         money.dollar_conversion()
         print 'You will have '+ str(money.get_foreign_currency()) + ' in new currency'
-        self.assertEqual(1,1)
+    # self.assertAlmostEquals(round(Decimal(money.dollar_conversion(100,'usd','eur')),5),round(Decimal(91),5),0,'Go to hell non defined variables!')
     	
 if __name__ == '__main__':
     unittest.main()
