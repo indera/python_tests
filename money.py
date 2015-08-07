@@ -24,3 +24,12 @@ class Money(object):
     	""" Returns the remainder after dividing the balance with the given number"""
     	return self._amount % amt
 
+    def convert(self, target_currency):
+    	""" Returns the balance converted into a new currency """
+    	conversion_factor_dict = {
+			'USD' : 1,
+			'EUR' : 0.911847,
+			'THB' : 35.1375,
+			'CAD' : 1.31298
+			}
+	return self._amount * conversion_factor_dict[target_currency]
