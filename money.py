@@ -37,6 +37,7 @@ class Money(object):
 
         return whole
 
+    # Conversion of one currency to another
     def convert(self, conversion_amount):
 
         self._converted_amount = self._amount * conversion_amount

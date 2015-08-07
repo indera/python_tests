@@ -45,9 +45,9 @@ class TestMoney(unittest.TestCase):
     # Convert currency types
     def test_convert_currency(self):
         money = Money(1500)
-        money.convert(0.0032108584005869)
+        money.convert(340.750)
 
-        self.assertEqual(4.81628760088035, money.get_converted_amount())
+        self.assertEqual(511125, money.get_converted_amount())
 
 if __name__ == '__main__':
     unittest.main()
