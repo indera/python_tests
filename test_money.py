@@ -36,6 +36,12 @@ class TestMoney(unittest.TestCase):
 
         self.assertEqual(2, money.get_amount())
 
+    def test_remainder(self):
+        money = Money(8)
+        money.remainder(3)
+
+        self.assertEqual(2, money.get_remainder())
+
 
 
 if __name__ == '__main__':
