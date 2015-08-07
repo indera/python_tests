@@ -16,3 +16,6 @@ class Money(object):
 
     def multiply(self, amt):
         self._amount = self._amount * amt
+
+    def remainder(self, divisor):
+        return self._amount%divisor
