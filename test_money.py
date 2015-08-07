@@ -5,6 +5,10 @@ from money import Money
 
 
 class TestMoney(unittest.TestCase):
+    def test_asura_multiply(self):
+        money = Money(2)
+        money.multiply(3)
+        self.assertEqual(6, money.get_amount())
 
     def test_subtract(self):
         """ Verify that the subtract function works well"""
@@ -16,13 +20,14 @@ class TestMoney(unittest.TestCase):
         """ Verify that we can add a number to the class amount"""
         money = Money(1)
         money.add(2)
-
         self.assertEqual(3, money.get_amount())
 
-    def test_asura_multiply(self):
-        money = Money(2)
-        money.multiply(3)
-        self.assertEqual(6, money.get_amount())
+    def test_nrejack_multiply(self):
+    	""" Verify that we can multiply the class amount by a number"""
+    	money = Money(10)
+    	money.multiply(3)
+
+    	self.assertEqual(30, money.get_amount())
 
 if __name__ == '__main__':
     unittest.main()
