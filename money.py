@@ -14,6 +14,8 @@ class Money(object):
             return 340.750
         elif symbol == 'GBP':
             return 0.65
+        else:
+            return 0
 
     # Accessor Methods for Class Variables
     def get_amount(self):
