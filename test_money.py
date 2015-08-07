@@ -42,6 +42,13 @@ class TestMoney(unittest.TestCase):
 
         self.assertEqual(2, money.get_remainder())
 
+# test convert to Peso current rate is .062 dollars to the peso
+    def test_convert(self):
+        money = Money(10)
+        money.convert(.062)
+
+        self.assertEqual(161.29, money.get_conversion())
+
 
 
 if __name__ == '__main__':
