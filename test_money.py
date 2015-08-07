@@ -40,7 +40,14 @@ class TestMoney(unittest.TestCase):
         """ will the currency exchange work"""
         money = Money(10)
         conversion = money.converter()
-        self.assertEqual(6.50, conversion) 
+        self.assertEqual(6.50, conversion)
+
+    def test_accounting(self):
+        """ lets do this"""
+        money = Money(20)
+        money.add(2)
+        money.subtract(3)
+        self.assertEqual(19, money.get_amount())
 
 if __name__ == '__main__':
     unittest.main()

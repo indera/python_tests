@@ -27,5 +27,9 @@ class Money(object):
         gbpconversionrate = .65
         return self._amount * gbpconversionrate
 
+    def accounting(self, amt):
+        self._amount = self._amount + amt - amt
+        return self._amount
+
 
 
