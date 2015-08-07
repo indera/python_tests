@@ -22,14 +22,13 @@ class TestMoney(unittest.TestCase):
 
 
 
-=======
         """
         verify that we can add a number to the class amount
         """
         money = Money(1)
         money.add(2)
         self.assertEqual(3, money.get_amount())
->>>>>>> e51a4edd0f65455cc690e1aeddfac257cb469a06
+
 
     def test_atloiaco_mulitply(self):
         money = Money(2)
@@ -48,7 +47,7 @@ class TestMoney(unittest.TestCase):
         money = Money(3)
         money.multiply(2)
 
-        self.assertEqual(3, money.get_amount())    
+        self.assertEqual(3, money.get_amount())
 
 if __name__ == '__main__':
     unittest.main()
