@@ -28,3 +28,7 @@ class Money(object):
 
     def remainder(self, amt):
         self._amount = self._amount % amt
+
+    def dollar_peso_conversion(self, rate):
+        pesos = self._amount * rate
+        return pesos
