@@ -6,6 +6,7 @@ from money import Money
 #set the starting balance of the account
 mynewlocalmoneyobject = Money(100)
 
+
 #credit the checking balance with some amount
 mynewlocalmoneyobject.add(100)
 
@@ -13,4 +14,4 @@ mynewlocalmoneyobject.add(100)
 mynewlocalmoneyobject.subtract(50)
 
 #return the new balance
-print mynewlocalmoneyobject.get_amount() 
+print "Your starting balance was 100. You deposited 100. You withdrew 50. Your new balance is: $",mynewlocalmoneyobject.get_amount() 
