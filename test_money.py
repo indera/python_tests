@@ -40,21 +40,21 @@ class TestMoney(unittest.TestCase):
 
     	self.assertEqual(expected_remainder, 1)
 
-   	def test_nrejack_convert(self, target_currency):
+    def test_nrejack_convert(self):
    		money = Money(1000)
    		
-   		# this is vacation.
-   		# we're only concerned with whole units of currency
-   		# no pocket change please
-   		# except for loonies and toonies
-   		
-   		euros = 912
-   		thai_baht = 35138
-   		cad = 1313
+   		euros = 911
+   		thai_baht = 35137
+   		cad = 1312
 
-   		expected_euros = money.convert('EUR')
-   		expected_thai_baht = money.convert('THB')
-   		expected_canadian_dollars = money.convert('CAD')
+      # this is vacation.
+      # we're only concerned with whole units of currency
+      # no pocket change please
+      # except for loonies and toonies
+
+   		expected_euros = int(money.convert('EUR'))
+   		expected_thai_baht = int(money.convert('THB'))
+   		expected_canadian_dollars = int(money.convert('CAD'))
 
    		self.assertEqual(expected_euros, euros)
    		self.assertEqual(expected_thai_baht, thai_baht)
