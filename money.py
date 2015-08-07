@@ -7,6 +7,10 @@ class Money(object):
         self._converted_amount = None
         self._remainder = None
 
+    def get_conversion(self, symbol):
+        if symbol == 'GRD':
+            return 340.750
+
     # Accessor Methods for Class Variables
     def get_amount(self):
         return self._amount
@@ -38,7 +42,7 @@ class Money(object):
         return whole
 
     # Conversion of one currency to another
-    def convert(self, conversion_amount):
-
+    def convert(self, conversion_symbol):
+        conversion_amount = self.get_conversion(conversion_symbol)
         self._converted_amount = self._amount * conversion_amount
 
