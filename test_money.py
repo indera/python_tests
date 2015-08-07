@@ -42,7 +42,12 @@ class TestMoney(unittest.TestCase):
         money.remainder(3)
         self.assertEqual(1, money.get_remainder())
 
-
+    def test_mbuchholz_converter(self):
+        """Verify we can return a currency converted"""
+        money = Money(2)
+        money.converter(.91)
+        self.assertEqual(1.82, money.get_converter())
+        
 
 
 
