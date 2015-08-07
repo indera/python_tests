@@ -36,5 +36,16 @@ class TestMoney(unittest.TestCase):
         money.divide(2)
         self.assertEqual(5, money.get_amount())
 
+    def test_mbuchholz_remainder(self):
+        """Verify that we can get the remainder of a number"""
+        money = Money(10)
+        money.remainder(3)
+        self.assertEqual(1, money.get_remainder())
+
+
+
+
+
+
 if __name__ == '__main__':
     unittest.main()
