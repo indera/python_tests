@@ -14,5 +14,8 @@ class Money(object):
     def multiply(self, factor):
         self._amount = self._amount * factor
 
+    def divide(self, factor):
+        self._amount = self._amount / factor
+
     def get_amount(self):
         return self._amount
