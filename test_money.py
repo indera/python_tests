@@ -45,9 +45,12 @@ class TestMoney(unittest.TestCase):
     # Convert currency types
     def test_convert_currency(self):
         money = Money(1500)
-        money.convert('GRD')
 
+        money.convert('GRD')
         self.assertEqual(511125, money.get_converted_amount())
+
+        money.convert('GBP')
+        self.assertEqual(975, money.get_converted_amount())
 
 if __name__ == '__main__':
     unittest.main()

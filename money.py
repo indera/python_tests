@@ -10,6 +10,8 @@ class Money(object):
     def get_conversion(self, symbol):
         if symbol == 'GRD':
             return 340.750
+        elif symbol == 'GBP':
+            return 0.65
 
     # Accessor Methods for Class Variables
     def get_amount(self):
