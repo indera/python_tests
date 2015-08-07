@@ -40,3 +40,5 @@ class Money(object):
     def convert(self, conversion_amount):
 
         self._converted_amount = self._amount * conversion_amount
+
+        
