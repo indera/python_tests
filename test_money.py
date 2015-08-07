@@ -23,7 +23,7 @@ class TestMoney(unittest.TestCase):
         money.add(2)
         self.assertEqual(3, money.get_amount())
 
-    def test_keyes_mulitply(self):
+    def test_keyes_multiply(self):
         money = Money(8)
         money.multiply(8)
         self.assertEqual(64, money.get_amount())
