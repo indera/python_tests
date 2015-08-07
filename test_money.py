@@ -18,5 +18,13 @@ class TestMoney(unittest.TestCase):
         money.add(2)
         self.assertEqual(money.get_amount(), 44)
 
+    def test_taeber_multiple(self):
+        money = Money(3)
+        money.multiply(2)
+        self.assertEqual(money.get_amount(), 6)
+        money.multiply(1.0/6)
+        self.assertEqual(money.get_amount(), 1)
+
+
 if __name__ == '__main__':
     unittest.main()
