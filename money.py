@@ -1,3 +1,5 @@
+import math
+
 
 class Money(object):
 
@@ -19,3 +21,6 @@ class Money(object):
 
     def remainder(self, divisor):
         return self._amount%divisor
+
+    def convert(self, convertor):
+        return convertor.convert(self._amount)
