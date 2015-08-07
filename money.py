@@ -20,5 +20,7 @@ class Money(object):
     def divide(self, amt):
     	self._amount = self._amount / amt
 
-
+    def remainder(self, amt):
+    	""" Returns the remainder after dividing the balance with the given number"""
+    	return self._amount % amt
 

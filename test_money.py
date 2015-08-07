@@ -33,6 +33,12 @@ class TestMoney(unittest.TestCase):
 
     	self.assertEqual(222, money.get_amount())
 
+    def test_nrejack_remainder(self):
+    	""" Verify that we can return a remainder after dividing the class amount by a number. """
+    	money = Money(100)
+    	expected_remainder = money.remainder(3)
+
+    	self.assertEqual(expected_remainder, 1)
 
 if __name__ == '__main__':
     unittest.main()
