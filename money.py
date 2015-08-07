@@ -22,4 +22,7 @@ class Money(object):
 
     def divide(self, amt):
         self._amount = self._amount / amt
+    
+    def remainder(self, amt):
+        self._amount = self._amount % amt
         

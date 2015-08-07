@@ -32,6 +32,12 @@ class TestMoney(unittest.TestCase):
         money = Money(28)
         money.divide(4)
         self.assertEqual(7, money.get_amount())
+        
+    def test_cavedivr_remainder(self):
+        """ Verify that we can return the remainder"""
+        money = Money(26)
+        money.remainder(4)
+        self.assertEqual(2, money.get_amount())
     
 if __name__ == '__main__':
     unittest.main()
