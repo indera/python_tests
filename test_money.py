@@ -28,12 +28,6 @@ class TestMoney(unittest.TestCase):
         money.multiply(2)
         self.assertEqual(1,1)
 
-    def test_add(self):
-        """ Verify that we can add a number to the class amount"""
-        money = Money(1)
-        money.add(2)
-        self.assertEqual(3, money.get_amount())
-        
     
 if __name__ == '__main__':
     unittest.main()
