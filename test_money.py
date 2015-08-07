@@ -21,10 +21,18 @@ class TestMoney(unittest.TestCase):
 
     def test_nrejack_multiply(self):
     	""" Verify that we can multiply the class amount by a number"""
+    	money = Money(666)
+    	money.divide(3)
+
+    	self.assertEqual(222, money.get_amount())
+
+    def test_nrejack_divide(self):
+    	""" Verify that we can divide the class amount by a number"""
     	money = Money(10)
     	money.multiply(3)
 
     	self.assertEqual(30, money.get_amount())
-    	
+
+
 if __name__ == '__main__':
     unittest.main()

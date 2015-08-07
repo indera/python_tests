@@ -10,3 +10,10 @@ class Money(object):
 
     def get_amount(self):
         return self._amount
+
+    def add(self, amt):
+    	self._amount = self._amount + amt
+
+    def multiply(self,amt):
+    	self._amount = self._amount * amt
+
