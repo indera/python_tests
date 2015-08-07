@@ -8,5 +8,11 @@ class Money(object):
     def subtract(self, amt):
         self._amount = self._amount - amt
 
+    def add(self, amt):
+        self._amount = self._amount + amt
+
+    def multiply(self, factor):
+        self._amount = self._amount * factor
+
     def get_amount(self):
         return self._amount
