@@ -5,6 +5,7 @@ class Money(object):
     # Sample Money Object Instantiation
     def __init__(self, balance):
         self._amount = balance
+        self._conversion_symbol = None
         self._converted_amount = None
         self._remainder = None
 
@@ -46,6 +47,7 @@ class Money(object):
 
     # Conversion of one currency to another
     def convert(self, conversion_symbol):
-        conversion_amount = self.get_conversion(conversion_symbol)
+        self._conversion_symbol = conversion_symbol
+        conversion_amount = self.get_conversion(self._conversion_symbol)
         self._converted_amount = self._amount * conversion_amount
 
