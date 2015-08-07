@@ -50,7 +50,7 @@ class TestMoney(unittest.TestCase):
         self.assertEqual(511125, money.get_converted_amount())
 
         money.convert('GBP')
-        self.assertEqual(975, money.get_converted_amount())
+        self.assertEqual(975.0000000000000333066907388, money.get_converted_amount())
 
 if __name__ == '__main__':
     unittest.main()
