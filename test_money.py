@@ -25,6 +25,11 @@ class TestMoney(unittest.TestCase):
         money.multiply(10)
         self.assertEqual(money.get_amount(), 20)
 
+    def test_atloiaco_division(self):
+        money = Money(10)
+        money.divide(2)
+        self.assertEqual(money.get_amount(),5)
+
     	
 if __name__ == '__main__':
     unittest.main()

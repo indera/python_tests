@@ -22,3 +22,6 @@ class Money(object):
             count = count +1
 
         self._amount = answer
+
+    def divide(self, amt):
+        self._amount = self._amount / amt
