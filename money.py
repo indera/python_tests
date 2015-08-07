@@ -1,4 +1,6 @@
 from decimal import *
+import json
+import urllib2
 
 
 class Money(object):
@@ -35,6 +37,10 @@ class Money(object):
         remainder = self._amount % amt
         return remainder
 
-    def dollar_conversion(self, rate):
+    def dollar_conversion(self):
+        original = input('Enter home currency type (ex: USD, EUR, GBP): ')
+        new = input('Enter destination currency type (ex: USD, EUR, GBP): ')
+        json_dict = json.load(urllib2.urlopen('https://currency-api.appspot.com/api/%s/%s.json' % (original, new)))
+        rate = json_dict['rate']
         self.foreign_currency = Decimal(self._amount) * Decimal(rate)
         return self.foreign_currency
