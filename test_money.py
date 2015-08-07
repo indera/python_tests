@@ -32,8 +32,7 @@ class TestMoney(unittest.TestCase):
 
     def test_atloiaco_remainder(self):
         money = Money(10)
-        money.remainder(2)
-        self.assertEqual(money.get_amount(),0)
+        self.assertEqual(money.remainder(2),0)
 
     def test_atloiaco_dollar_peso_conversion(self):
         money = Money(100)
