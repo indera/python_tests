@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import unittest
+from decimal import *
 from money import Money
 
 
@@ -34,10 +35,10 @@ class TestMoney(unittest.TestCase):
         money = Money(10)
         self.assertEqual(money.remainder(2),0)
 
-    def test_atloiaco_dollar_peso_conversion(self):
+    def test_atloiaco_dollar_conversion(self):
         money = Money(100)
         money.dollar_conversion(0.0036)
-        self.assertEqual(money.get_foreign_currency(),.36)
+        self.assertEqual(round(money.get_foreign_currency(),10),Decimal(round(.36,10)))
     	
 if __name__ == '__main__':
     unittest.main()

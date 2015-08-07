@@ -1,3 +1,5 @@
+from decimal import *
+
 
 class Money(object):
 
@@ -34,5 +36,5 @@ class Money(object):
         return remainder
 
     def dollar_conversion(self, rate):
-        self.foreign_currency = self._amount * rate
+        self.foreign_currency = Decimal(self._amount) * Decimal(rate)
         return self.foreign_currency
