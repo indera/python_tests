@@ -29,6 +29,13 @@ class TestMoney(unittest.TestCase):
 
     	self.assertEqual(192, money.get_amount())
 
+    def test_cpb_divide(self):
+        """ Verify that we can divide """
+        money = Money(8)
+        money.divide(4)
+
+        self.assertEqual(2, money.get_amount())
+
 
 
 if __name__ == '__main__':
