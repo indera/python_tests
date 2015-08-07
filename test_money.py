@@ -26,6 +26,14 @@ class TestMoney(unittest.TestCase):
         money.multiply(3)
         self.assertEqual(money.get_amount(),75)
 
+    def test_divide(self):
+        """
+        Verify that the divide method of the Money class divides the _amount property by the first parameter
+        """
+        money = Money(25)
+        money.divide(5)
+        self.assertEqual(money.get_amount(),5)
+
 
 if __name__ == '__main__':
     unittest.main()
