@@ -19,3 +19,6 @@ class Money(object):
 
     def multiply(self, amt):
         self._amount = self._amount * amt
+
+    def divide(self, amt):
+        self._amount = self._amount / amt

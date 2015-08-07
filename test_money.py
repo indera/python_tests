@@ -30,5 +30,11 @@ class TestMoney(unittest.TestCase):
         money.multiply(2)
         self.assertEqual(20, money.get_amount())
 
+    def test_mbuchholz_divide(self):
+        """Verify that we can multiply numbers"""
+        money = Money(10)
+        money.divide(2)
+        self.assertEqual(5, money.get_amount())
+
 if __name__ == '__main__':
     unittest.main()
