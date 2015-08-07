@@ -5,6 +5,10 @@ from money import Money
 
 
 class TestMoney(unittest.TestCase):
+    def test_asura_multiply(self):
+        money = Money(2)
+        money.multiply(3)
+        self.assertEqual(6, money.get_amount())
 
     def test_subtract(self):
         """ Verify that the subtract function works well """
