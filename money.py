@@ -20,3 +20,9 @@ class Money(object):
     def divide(self, amt):
         self._amount = self._amount / amt
 
+    def get_remainder(self, amt):
+        return self._amount % amt
+
+
+
+
