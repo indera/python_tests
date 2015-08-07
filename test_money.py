@@ -24,9 +24,9 @@ class TestMoney(unittest.TestCase):
         self.assertEqual(3, money.get_amount())
 
     def test_keyes_mulitply(self):
-        money = Money(2)
-        money.multiply(2)
-        self.assertEqual(1,1)
+        money = Money(8)
+        money.multiply(8)
+        self.assertEqual(64, money.get_amount())
 
     
 if __name__ == '__main__':
