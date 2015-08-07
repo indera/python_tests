@@ -1,3 +1,3 @@
 
 test:
-	py.test --tb=short -s test_money.py
+	PYTHONPATH=. py.test --tb=short -s tests/
