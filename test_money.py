@@ -20,12 +20,6 @@ class TestMoney(unittest.TestCase):
         money = Money(1)
         money.add(2)
         self.assertEqual(3, money.get_amount())
-
-    def test_add(self):
-        """ Verify that we can add a number to the class amount"""
-        money = Money(1)
-        money.add(2)
-        self.assertEqual(3, money.get_amount())
         
     def test_cavedivr_multiply(self):
         """ Verify that we can multiply a number by the class amount"""
