@@ -4,12 +4,16 @@ class Money(object):
     """ Sample money object """
     def __init__(self, balance):
         self._amount = balance
+        self.foreign_currency = 0
 
     def subtract(self, amt):
         self._amount = self._amount - amt
 
     def get_amount(self):
         return self._amount
+
+    def get_foreign_currency(self):
+        return self.foreign_currency
 
     def add(self, amt):
         self._amount = self._amount + amt
@@ -20,7 +24,6 @@ class Money(object):
         while count < amt:
             answer += self._amount
             count = count +1
-
         self._amount = answer
 
     def divide(self, amt):
@@ -30,6 +33,6 @@ class Money(object):
         remainder = self._amount % amt
         return remainder
 
-    def dollar_peso_conversion(self, rate):
-        pesos = self._amount * rate
-        return pesos
+    def dollar_conversion(self, rate):
+        self.foreign_currency = self._amount * rate
+        return self.foreign_currency
