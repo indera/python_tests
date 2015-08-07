@@ -31,11 +31,11 @@ class TestMoney(unittest.TestCase):
 
     def test_conversion_to_inr(self):
         money = Money(100)
-        rupees = money.convert(MockUsdToInrConverter())
+        rupees = money.convert(MockRealtimeUsdToInrConversionService())
         self.assertEquals(rupees, 5000)
 
 
-class MockUsdToInrConverter(object):
+class MockRealtimeUsdToInrConversionService(object):
     def convert(self, amount):
         return amount * 50
 
