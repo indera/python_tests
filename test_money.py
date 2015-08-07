@@ -24,6 +24,20 @@ class TestMoney(unittest.TestCase):
         money.multiply(10)
         self.assertEqual(money.get_amount(), 30)
 
+    def test_divide(self):
+        money = Money(2)
+        monies = money.divide(2)
+        self.assertItemsEqual(monies, (1, 1))
+
+    def test_divide_fractions_equally(self):
+        money = Money(1.00)
+        monies = money.divide(3)
+        self.assertItemsEqual(monies, (0.33, 0.33, 0.34))
+
+    def test_divide_by_zero(self):
+        money = Money(42)
+        self.assertRaisesRegexp(ZeroDivisionError, money.divide)
+
 
 
 if __name__ == '__main__':
