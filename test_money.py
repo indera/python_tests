@@ -26,6 +26,12 @@ class TestMoney(unittest.TestCase):
         money = Money(29)
         money.multiply(2)
         self.assertEqual(58, money.get_amount())
+        
+    def test_cavedivr_divide(self):
+        """ Verify that we can divide a number by the class amount"""
+        money = Money(28)
+        money.divide(4)
+        self.assertEqual(7, money.get_amount())
     
 if __name__ == '__main__':
     unittest.main()
