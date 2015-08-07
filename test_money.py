@@ -42,13 +42,15 @@ class TestMoney(unittest.TestCase):
         self.assertEqual(12, money.divide(8))
         self.assertEqual(4, money.get_remainder())
 
-    # Convert currency types
-    def test_convert_currency(self):
+    # Convert currency types GRD
+    def test_convert_currency_GRD(self):
         money = Money(1500)
-
         money.convert('GRD')
         self.assertEqual(511125, money.get_converted_amount())
 
+    # Convert currency types GRP
+    def test_convert_currency_GRP(self):
+        money = Money(1500)
         money.convert('GBP')
         self.assertEqual(975.0000000000000333066907388, money.get_converted_amount())
 
