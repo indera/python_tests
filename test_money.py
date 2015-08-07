@@ -30,6 +30,11 @@ class TestMoney(unittest.TestCase):
         money.divide(2)
         self.assertEqual(money.get_amount(),5)
 
+    def test_atloiaco_remainder(self):
+        money = Money(10)
+        money.remainder(2)
+        self.assertEqual(money.get_amount(),0)
+
     	
 if __name__ == '__main__':
     unittest.main()
