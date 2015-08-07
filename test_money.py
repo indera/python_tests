@@ -12,6 +12,18 @@ class TestMoney(unittest.TestCase):
         money.subtract(2)
         self.assertEqual(money.get_amount(), 40)
 
+    def test_add(self):
+        """
+        verify that we can add a number to the class amount
+        """
+        money = Money(1)
+        money.add(2)
+        self.assertEqual(3, money.get_amount())
+
+    def test_atloiaco_mulitply(self):
+        money = Money(2)
+        money.multiply(2)
+        self.assertEqual(1,1)
 
 if __name__ == '__main__':
     unittest.main()
